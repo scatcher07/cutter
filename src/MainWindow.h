@@ -39,7 +39,7 @@ class EntrypointWidget;
 class DisassemblerGraphView;
 class ClassesWidget;
 class ResourcesWidget;
-
+class JupyterWidget;
 class QDockWidget;
 
 namespace Ui
@@ -150,6 +150,7 @@ private slots:
 
 private:
     CutterCore *core;
+
     bool panelLock;
     bool tabsOnTop;
     ut64 hexdumpTopOffset;
@@ -189,7 +190,8 @@ private:
     DisassemblerGraphView *graphView = nullptr;
     QDockWidget        *asmDock = nullptr;
     QDockWidget        *calcDock = nullptr;
-    NewFileDialog      *newFileDialog = nullptr; 
+    NewFileDialog      *newFileDialog = nullptr;
+    JupyterWidget      *jupyterDock = nullptr;
 
     void toggleDockWidget(QDockWidget *dock_widget, bool show);
 

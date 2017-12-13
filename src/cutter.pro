@@ -7,7 +7,7 @@ VERSION = 1.2
 
 ICON = img/cutter.icns
 
-QT += core gui widgets svg
+QT += core gui widgets svg webenginewidgets
 QT_CONFIG -= no-pkg-config
 CONFIG += c++11
 
@@ -90,7 +90,9 @@ SOURCES += \
     widgets/QuickFilterView.cpp \
     widgets/ClassesWidget.cpp \
     widgets/ResourcesWidget.cpp \
-    CutterApplication.cpp
+    CutterApplication.cpp \
+    utils/JupyterConnection.cpp \
+    widgets/JupyterWidget.cpp
 
 HEADERS  += \
     cutter.h \
@@ -150,7 +152,9 @@ HEADERS  += \
     widgets/QuickFilterView.h \
     widgets/ClassesWidget.h \
     widgets/ResourcesWidget.h \
-    CutterApplication.h
+    CutterApplication.h \
+    utils/JupyterConnection.h \
+    widgets/JupyterWidget.h
 
 FORMS    += \
     dialogs/AboutDialog.ui \
@@ -186,7 +190,9 @@ FORMS    += \
     dialogs/preferences/GraphOptionsWidget.ui \
     widgets/QuickFilterView.ui \
     widgets/PseudocodeWidget.ui \
-    widgets/ClassesWidget.ui
+    widgets/ClassesWidget.ui \
+    widgets/PseudocodeWidget.ui \
+    widgets/JupyterWidget.ui
 
 RESOURCES += \
     resources.qrc \
