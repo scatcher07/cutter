@@ -32,6 +32,14 @@ unix:exists(/usr/local/include/libr) {
     INCLUDEPATH += /usr/local/include/libr
 }
 
+# Libraries
+include(lib_radare2.pri)
+# TODO Not portable
+unix {
+    LIBS += /usr/lib/libpython3.6m.so
+    INCLUDEPATH += /usr/include/python3.6m
+}
+
 SOURCES += \
     main.cpp \
     cutter.cpp \
@@ -92,7 +100,8 @@ SOURCES += \
     widgets/ResourcesWidget.cpp \
     CutterApplication.cpp \
     utils/JupyterConnection.cpp \
-    widgets/JupyterWidget.cpp
+    widgets/JupyterWidget.cpp \
+    utils/PythonAPI.cpp
 
 HEADERS  += \
     cutter.h \
@@ -154,7 +163,8 @@ HEADERS  += \
     widgets/ResourcesWidget.h \
     CutterApplication.h \
     utils/JupyterConnection.h \
-    widgets/JupyterWidget.h
+    widgets/JupyterWidget.h \
+    utils/PythonAPI.h
 
 FORMS    += \
     dialogs/AboutDialog.ui \
@@ -200,10 +210,6 @@ RESOURCES += \
 
 
 DISTFILES += cutter.astylerc
-
-
-include(lib_radare2.pri)
-
 
 # 'make install' for AppImage
 unix {
