@@ -101,7 +101,8 @@ SOURCES += \
     CutterApplication.cpp \
     utils/JupyterConnection.cpp \
     widgets/JupyterWidget.cpp \
-    utils/PythonAPI.cpp
+    utils/PythonAPI.cpp \
+    utils/NestedIPyKernel.cpp
 
 HEADERS  += \
     cutter.h \
@@ -164,7 +165,8 @@ HEADERS  += \
     CutterApplication.h \
     utils/JupyterConnection.h \
     widgets/JupyterWidget.h \
-    utils/PythonAPI.h
+    utils/PythonAPI.h \
+    utils/NestedIPyKernel.h
 
 FORMS    += \
     dialogs/AboutDialog.ui \
